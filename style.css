@@ -1,0 +1,65 @@
+/*Resets*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  #root, #__next {
+    isolation: isolate;
+  }
+
+/*Styling*/
+:root {
+    --dash-blue: rgb(59, 112, 209);
+    --dash-text: white;
+    --dash-bg: rgb(209, 209, 209);
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dash-blue);
+    color: var(--dash-text);
+    gap: 8px;
+    grid-row: 1/-1;
+}
+
+main {
+    background-color: var(--dash-bg);
+    grid-column: 2/-1;
+    grid-row: 1/-1;
+}
+
+/*Main grid*/
+.main_grid {
+    display: grid;
+    resize: both;
+    overflow: auto;
+    grid-template: 1fr 2fr / 1fr 1fr 1fr;
+}
+
+nav, .user_actions, user_search {
+    display: flex;
+    flex-direction: row;
+}
+
+nav {
+    justify-content: space-between;
+    background-color: white;
+    grid-column: 2/4; /*i think we might need a class or id*/
+}

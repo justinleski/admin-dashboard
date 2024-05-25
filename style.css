@@ -28,38 +28,96 @@
     --dash-blue: rgb(59, 112, 209);
     --dash-text: white;
     --dash-bg: rgb(209, 209, 209);
+    --top-bar-padding: 16px;
 }
 
-aside {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--dash-blue);
-    color: var(--dash-text);
-    gap: 8px;
-    grid-row: 1/-1;
+button {
+    border: 0;
+    border-radius: 8px;
+    padding: 8px;
+    width: 80px;
+    line-height: 1;
+}
+
+body {
+    height: 100vh;
+}
+
+/**/
+
+
+.user_opts {
+  margin-bottom: 8px;
 }
 
 main {
     background-color: var(--dash-bg);
-    grid-column: 2/-1;
-    grid-row: 1/-1;
+    flex: 1;
 }
 
 /*Main grid*/
 .main_grid {
     display: grid;
-    resize: both;
-    overflow: auto;
-    grid-template: 1fr 2fr / 1fr 1fr 1fr;
+    grid-template: 1fr 1fr 10fr / 1fr 6fr;
+    height: 100vh;
 }
 
-nav, .user_actions, user_search {
-    display: flex;
-    flex-direction: row;
+aside {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--dash-blue);
+  color: var(--dash-text);
+  gap: 8px;
+  padding: 16px;
+
+  grid-column: 1 / 1;
+  grid-row: 1 / -1;
+}
+
+nav, .user_actions, .user_search {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
 }
 
 nav {
-    justify-content: space-between;
-    background-color: white;
-    grid-column: 2/4; /*i think we might need a class or id*/
+  justify-content: space-between;
+  background-color: white;
+  padding: var(--top-bar-padding);
+  line-height: 1;
+
+  grid-column: 2 / -1;
+  grid-row: 1 / 1;
 }
+
+section {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: var(--top-bar-padding);
+
+  grid-column: 2 / -1;
+  grid-row: 2 / 2;
+}
+
+article {
+  padding: 32px;
+
+  grid-column: 2 / -1;
+  grid-row: 3 / 3;
+}
+
+/*Children of these parents*/
+
+.media_buttons {
+    display: flex;
+    gap: 16px;
+}
+
+/*Project grid*/
+.project_grid {
+    display: grid;
+    
+}
+
+

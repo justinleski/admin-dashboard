@@ -190,8 +190,12 @@ article {
 }
 
 .title_card {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
+}
+
+.title_card h2 {
+    padding-bottom: 8px;
 }
 
 .project_card {
@@ -257,4 +261,14 @@ article {
 @media screen and (max-width: 955px){
     .project_grid {grid-template-columns: 1fr;}
     input {width: clamp(40px, 150%, 250%);}
+}
+
+@media screen and (min-width: 1800px){
+    p, h1, h2, h3, h4, h5, h6 {
+      font-size: 1.35rem;
+    }
+    button {
+        padding: 8px;
+        font-size: 1.1rem;
+    }
 }
